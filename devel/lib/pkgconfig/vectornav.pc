@@ -1,0 +1,8 @@
+prefix=/home/samuel/Documents/projetInt/devel
+
+Name: vectornav
+Description: Description of vectornav
+Version: 2.0.0
+Cflags: 
+Libs: -L/home/samuel/Documents/projetInt/devel/lib 
+Requires: roscpp sensor_msgs

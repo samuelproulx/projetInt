@@ -1,0 +1,8 @@
+prefix=/home/samuel/Documents/projetInt/install
+
+Name: pysdf
+Description: Description of pysdf
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/samuel/Documents/projetInt/install/lib 
+Requires: 

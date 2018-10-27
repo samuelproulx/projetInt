@@ -1,0 +1,225 @@
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using CATKIN_DEVEL_PREFIX: /home/samuel/Documents/Takin/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
+-- This workspace overlays: /opt/ros/kinetic
+-- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/samuel/Documents/Takin/build/test_results
+-- Found gmock sources under '/usr/src/gmock': gmock will be built
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found gtest sources under '/usr/src/gmock': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.14
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 14 packages in topological order:
+-- ~~  - capra_msgs
+-- ~~  - capra_camera
+-- ~~  - capra_navigation
+-- ~~  - capra_thermal
+-- ~~  - pysdf
+-- ~~  - capra_landolt_detection
+-- ~~  - capra_imu
+-- ~~  - capra_motors
+-- ~~  - capra_remote_controller
+-- ~~  - capra_camera_3d
+-- ~~  - vectornav
+-- ~~  - capra_simulation
+-- ~~  - capra_lidar
+-- ~~  - capra_qrcode_detection
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin package: 'capra_msgs'
+-- ==> add_subdirectory(capra_msgs)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- capra_msgs: 4 messages, 0 services
+-- +++ processing catkin package: 'capra_camera'
+-- ==> add_subdirectory(capra_camera)
+-- +++ processing catkin package: 'capra_navigation'
+-- ==> add_subdirectory(capra_navigation)
+-- +++ processing catkin package: 'capra_thermal'
+-- ==> add_subdirectory(capra_thermal)
+-- +++ processing catkin package: 'pysdf'
+-- ==> add_subdirectory(pysdf)
+-- +++ processing catkin package: 'capra_landolt_detection'
+-- ==> add_subdirectory(capra_landolt_detection)
+-- Boost version: 1.58.0
+-- Found the following Boost libraries:
+--   thread
+--   chrono
+--   system
+--   date_time
+--   atomic
+-- Found OpenCV: /opt/ros/kinetic (found version "3.3.1") 
+-- +++ processing catkin package: 'capra_imu'
+-- ==> add_subdirectory(capra_imu)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'capra_motors'
+-- ==> add_subdirectory(capra_motors)
+-- +++ processing catkin package: 'capra_remote_controller'
+-- ==> add_subdirectory(capra_remote_controller)
+-- +++ processing catkin package: 'capra_camera_3d'
+-- ==> add_subdirectory(capra_camera_3d)
+-- +++ processing catkin package: 'vectornav'
+-- ==> add_subdirectory(vectornav)
+-- +++ processing catkin package: 'capra_simulation'
+-- ==> add_subdirectory(capra_simulation)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- +++ processing catkin package: 'capra_lidar'
+-- ==> add_subdirectory(capra_lidar)
+-- +++ processing catkin package: 'capra_qrcode_detection'
+-- ==> add_subdirectory(capra_qrcode_detection)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/samuel/Documents/Takin/build
+Scanning dependencies of target _capra_msgs_generate_messages_check_deps_Landolts
+Scanning dependencies of target std_msgs_generate_messages_py
+Scanning dependencies of target _capra_msgs_generate_messages_check_deps_LandoltGap
+Scanning dependencies of target _capra_msgs_generate_messages_check_deps_BoundingBox
+[  0%] Built target std_msgs_generate_messages_py
+Scanning dependencies of target _capra_msgs_generate_messages_check_deps_BoundingCircle
+[  0%] Built target _capra_msgs_generate_messages_check_deps_Landolts
+[  0%] Built target _capra_msgs_generate_messages_check_deps_LandoltGap
+Scanning dependencies of target std_msgs_generate_messages_nodejs
+[  0%] Built target _capra_msgs_generate_messages_check_deps_BoundingBox
+Scanning dependencies of target std_msgs_generate_messages_cpp
+[  0%] Built target std_msgs_generate_messages_nodejs
+Scanning dependencies of target std_msgs_generate_messages_eus
+[  0%] Built target _capra_msgs_generate_messages_check_deps_BoundingCircle
+[  0%] Built target std_msgs_generate_messages_cpp
+Scanning dependencies of target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+Scanning dependencies of target i2c
+[  0%] Built target std_msgs_generate_messages_lisp
+Scanning dependencies of target video
+[  1%] Building CXX object capra_thermal/CMakeFiles/i2c.dir/src/I2C_Lepton/main.cpp.o
+Scanning dependencies of target capra_thermal
+[  3%] Building CXX object capra_thermal/CMakeFiles/video.dir/src/lepton_camera/src/video/lepton.cpp.o
+Scanning dependencies of target capra_motors
+[  4%] Building CXX object capra_thermal/CMakeFiles/capra_thermal.dir/src/capra_thermal.cpp.o
+[  6%] Building CXX object capra_motors/CMakeFiles/capra_motors.dir/src/cmd_vel.cpp.o
+[  7%] Building CXX object capra_thermal/CMakeFiles/i2c.dir/src/I2C_Lepton/I2C_Interface.cpp.o
+[  9%] Linking CXX executable /home/samuel/Documents/Takin/devel/lib/capra_thermal/i2c
+[  9%] Built target i2c
+Scanning dependencies of target capra_remote_controller
+[ 10%] Building CXX object capra_remote_controller/CMakeFiles/capra_remote_controller.dir/src/remote_controller.cpp.o
+[ 12%] Linking CXX executable /home/samuel/Documents/Takin/devel/lib/capra_motors/capra_motors
+[ 12%] Built target capra_motors
+Scanning dependencies of target vncxx
+[ 14%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/attitude.cpp.o
+[ 15%] Building CXX object capra_thermal/CMakeFiles/video.dir/src/lepton_camera/src/SPI/SPI.cpp.o
+[ 17%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/compositedata.cpp.o
+[ 18%] Linking CXX executable /home/samuel/Documents/Takin/devel/lib/capra_thermal/video
+[ 18%] Built target video
+Scanning dependencies of target capra_odometry_simulation_publisher
+[ 20%] Building CXX object capra_simulation/CMakeFiles/capra_odometry_simulation_publisher.dir/src/capra_odometry_simulation_publisher.cpp.o
+[ 21%] Linking CXX executable /home/samuel/Documents/Takin/devel/lib/capra_thermal/capra_thermal
+[ 23%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/conversions.cpp.o
+[ 23%] Built target capra_thermal
+[ 25%] Linking CXX executable /home/samuel/Documents/Takin/devel/lib/capra_remote_controller/capra_remote_controller
+Scanning dependencies of target capra_qrcode_detection
+[ 26%] Building CXX object capra_qrcode_detection/CMakeFiles/capra_qrcode_detection.dir/src/capra_qrcode_detection.cpp.o
+[ 28%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/criticalsection.cpp.o
+[ 29%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/dllvalidator.cpp.o
+[ 31%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/error_detection.cpp.o
+[ 31%] Built target capra_remote_controller
+Scanning dependencies of target capra_msgs_generate_messages_py
+[ 32%] Generating Python from MSG capra_msgs/LandoltGap
+[ 34%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/event.cpp.o
+[ 35%] Generating Python from MSG capra_msgs/Landolts
+[ 37%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/ezasyncdata.cpp.o
+[ 39%] Generating Python from MSG capra_msgs/BoundingBox
+[ 40%] Generating Python from MSG capra_msgs/BoundingCircle
+[ 42%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/memoryport.cpp.o
+[ 43%] Generating Python msg __init__.py for capra_msgs
+[ 45%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/packet.cpp.o
+[ 45%] Built target capra_msgs_generate_messages_py
+Scanning dependencies of target capra_msgs_generate_messages_nodejs
+[ 46%] Generating Javascript code from capra_msgs/LandoltGap.msg
+[ 48%] Generating Javascript code from capra_msgs/Landolts.msg
+[ 50%] Generating Javascript code from capra_msgs/BoundingBox.msg
+[ 51%] Generating Javascript code from capra_msgs/BoundingCircle.msg
+[ 51%] Built target capra_msgs_generate_messages_nodejs
+Scanning dependencies of target capra_msgs_generate_messages_cpp
+[ 53%] Generating C++ code from capra_msgs/LandoltGap.msg
+[ 54%] Generating C++ code from capra_msgs/Landolts.msg
+[ 56%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/packetfinder.cpp.o
+[ 57%] Generating C++ code from capra_msgs/BoundingBox.msg
+[ 59%] Generating C++ code from capra_msgs/BoundingCircle.msg
+[ 59%] Built target capra_msgs_generate_messages_cpp
+Scanning dependencies of target capra_msgs_generate_messages_eus
+[ 60%] Generating EusLisp code from capra_msgs/LandoltGap.msg
+[ 62%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/port.cpp.o
+[ 64%] Generating EusLisp code from capra_msgs/Landolts.msg
+[ 65%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/position.cpp.o
+[ 67%] Generating EusLisp code from capra_msgs/BoundingBox.msg
+[ 68%] Generating EusLisp code from capra_msgs/BoundingCircle.msg
+[ 70%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/searcher.cpp.o
+[ 71%] Generating EusLisp manifest code for capra_msgs
+[ 73%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/sensors.cpp.o
+[ 73%] Built target capra_msgs_generate_messages_eus
+[ 75%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/serialport.cpp.o
+Scanning dependencies of target capra_msgs_generate_messages_lisp
+[ 76%] Generating Lisp code from capra_msgs/LandoltGap.msg
+[ 78%] Linking CXX executable /home/samuel/Documents/Takin/devel/lib/capra_qrcode_detection/capra_qrcode_detection
+[ 79%] Generating Lisp code from capra_msgs/Landolts.msg
+[ 81%] Generating Lisp code from capra_msgs/BoundingBox.msg
+[ 82%] Generating Lisp code from capra_msgs/BoundingCircle.msg
+[ 82%] Built target capra_msgs_generate_messages_lisp
+Scanning dependencies of target capra_msgs_gencpp
+[ 82%] Built target capra_msgs_gencpp
+[ 84%] Linking CXX executable /home/samuel/Documents/Takin/devel/lib/capra_simulation/capra_odometry_simulation_publisher
+Scanning dependencies of target capra_msgs_generate_messages
+[ 84%] Built target capra_msgs_generate_messages
+[ 85%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/thread.cpp.o
+[ 87%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/types.cpp.o
+[ 89%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/util.cpp.o
+[ 90%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/utilities.cpp.o
+[ 90%] Built target capra_odometry_simulation_publisher
+Scanning dependencies of target capra_nodelet_landolt
+[ 92%] Building CXX object vectornav/vnproglib-1.1/cpp/CMakeFiles/vncxx.dir/src/vntime.cpp.o
+[ 93%] Building CXX object capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/src/LandoltNodelet.cpp.o
+[ 93%] Built target capra_qrcode_detection
+[ 95%] Linking CXX shared library /home/samuel/Documents/Takin/devel/lib/libvncxx.so
+[ 95%] Built target vncxx
+Scanning dependencies of target vnpub
+[ 96%] Building CXX object vectornav/CMakeFiles/vnpub.dir/src/main.cpp.o
+[ 98%] Linking CXX executable /home/samuel/Documents/Takin/devel/lib/vectornav/vnpub
+[ 98%] Built target vnpub
+[100%] Linking CXX shared library /home/samuel/Documents/Takin/devel/lib/libcapra_nodelet_landolt.so
+[100%] Built target capra_nodelet_landolt
+Base path: /home/samuel/Documents/Takin
+Source space: /home/samuel/Documents/Takin/src
+Build space: /home/samuel/Documents/Takin/build
+Devel space: /home/samuel/Documents/Takin/devel
+Install space: /home/samuel/Documents/Takin/install
+####
+#### Running command: "cmake /home/samuel/Documents/Takin/src -DCATKIN_DEVEL_PREFIX=/home/samuel/Documents/Takin/devel -DCMAKE_INSTALL_PREFIX=/home/samuel/Documents/Takin/install -G Unix Makefiles" in "/home/samuel/Documents/Takin/build"
+####
+####
+#### Running command: "make -j4 -l4" in "/home/samuel/Documents/Takin/build"
+####

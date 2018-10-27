@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/samuel/Documents/projetInt/src/capra_thermal/./include/flir_lepton/I2C_Interface.h
+
+/home/samuel/Documents/projetInt/src/capra_thermal/src/I2C_Lepton/I2C_Interface.cpp
+errno.h
+-
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+linux/i2c-dev.h
+-
+sys/ioctl.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+I2C_Interface.h
+/home/samuel/Documents/projetInt/src/capra_thermal/src/I2C_Lepton/I2C_Interface.h
+
+/home/samuel/Documents/projetInt/src/capra_thermal/src/I2C_Lepton/main.cpp
+I2C_Interface.h
+/home/samuel/Documents/projetInt/src/capra_thermal/src/I2C_Lepton/I2C_Interface.h
+stdio.h
+-
+

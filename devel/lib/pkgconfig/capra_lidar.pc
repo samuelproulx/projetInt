@@ -1,0 +1,8 @@
+prefix=/home/samuel/Documents/projetInt/devel
+
+Name: capra_lidar
+Description: Description of capra_lidar
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/samuel/Documents/projetInt/devel/lib 
+Requires: 

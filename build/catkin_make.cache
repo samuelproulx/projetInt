@@ -1,0 +1,2 @@
+capra_camera:capra_camera_3d:capra_imu:capra_landolt_detection:capra_lidar:capra_motors:capra_msgs:capra_navigation:capra_qrcode_detection:capra_remote_controller:capra_simulation:capra_thermal:pysdf:vectornav
+-DCATKIN_DEVEL_PREFIX=/home/samuel/Documents/projetInt/devel -DCMAKE_INSTALL_PREFIX=/home/samuel/Documents/projetInt/install -G Unix Makefiles

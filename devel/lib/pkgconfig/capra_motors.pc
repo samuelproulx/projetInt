@@ -1,0 +1,8 @@
+prefix=/home/samuel/Documents/projetInt/devel
+
+Name: capra_motors
+Description: Description of capra_motors
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/samuel/Documents/projetInt/devel/lib 
+Requires: 

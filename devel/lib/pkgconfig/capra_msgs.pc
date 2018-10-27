@@ -1,0 +1,8 @@
+prefix=/home/samuel/Documents/projetInt/devel
+
+Name: capra_msgs
+Description: Description of capra_msgs
+Version: 0.0.0
+Cflags: -I/home/samuel/Documents/projetInt/devel/include
+Libs: -L/home/samuel/Documents/projetInt/devel/lib 
+Requires: message_runtime std_msgs

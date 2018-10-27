@@ -1,0 +1,9 @@
+<launch>
+
+    <group ns="capra">
+        <include file="$(find astra_launch)/launch/astra.launch" >
+            <arg name="camera" value="camera_3d" />
+        </include>
+    </group>
+    
+</launch>
