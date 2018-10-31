@@ -1,0 +1,8 @@
+prefix=/home/samuel/Documents/projetInt/install
+
+Name: pkgInt
+Description: Description of pkgInt
+Version: 0.0.0
+Cflags: -I/home/samuel/Documents/projetInt/install/include
+Libs: -L/home/samuel/Documents/projetInt/install/lib -lpkgInt
+Requires: geometry_msgs roscpp

@@ -1,0 +1,8 @@
+prefix=/home/samuel/Documents/projetInt/install
+
+Name: capra_camera
+Description: Description of capra_camera
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/samuel/Documents/projetInt/install/lib 
+Requires: 

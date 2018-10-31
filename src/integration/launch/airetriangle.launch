@@ -1,0 +1,6 @@
+<launch>
+
+    <node pkg="integration" name="triangle_server" type="triangle_server"/>
+    <node pkg="integration" name="triangle_client" type="triangle_client"/>
+
+</launch>
