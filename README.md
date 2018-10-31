@@ -19,6 +19,7 @@ This section will help you find what you need in Takin project.
 | [IMU](src/capra_imu/) | This package contains the launch file for publishing many topics from the VN-300 driver |
 | [Camera](src/capra_camera/) | This package is a wrapper around the camera. |
 | [Camera3D](src/capra_camera_3d/) | This package is a wrapper around the camera 3D. |
+| [Integration] (src/integration/) | This package is the integration project for newcommers in LOG 
 
 ## Getting Started
 
