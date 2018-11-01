@@ -1,0 +1,8 @@
+prefix=/home/samuel/Documents/projetInt/devel
+
+Name: pkgInt
+Description: Description of pkgInt
+Version: 0.0.0
+Cflags: -I/home/samuel/Documents/projetInt/devel/include -I/home/samuel/Documents/projetInt/src/pkgInt/include
+Libs: -L/home/samuel/Documents/projetInt/devel/lib -lpkgInt
+Requires: geometry_msgs roscpp std_msgs message_generation

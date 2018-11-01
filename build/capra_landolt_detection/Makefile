@@ -68,6 +68,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -78,6 +89,28 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -99,39 +132,6 @@ install/strip: preinstall
 install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,21 +166,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-capra_landolt_detection/CMakeFiles/roslint.dir/rule:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/roslint.dir/rule
-.PHONY : capra_landolt_detection/CMakeFiles/roslint.dir/rule
-
-# Convenience name for target.
-roslint: capra_landolt_detection/CMakeFiles/roslint.dir/rule
-
-.PHONY : roslint
-
-# fast build rule for target.
-roslint/fast:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/roslint.dir/build.make capra_landolt_detection/CMakeFiles/roslint.dir/build
-.PHONY : roslint/fast
-
-# Convenience name for target.
 capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
@@ -211,19 +196,34 @@ sensor_msgs_generate_messages_eus/fast:
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/rule:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/rule
-.PHONY : capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/rule
+capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
+	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+.PHONY : capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-roslint_capra_landolt_detection: capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/rule
+sensor_msgs_generate_messages_cpp: capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : roslint_capra_landolt_detection
+.PHONY : sensor_msgs_generate_messages_cpp
 
 # fast build rule for target.
-roslint_capra_landolt_detection/fast:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/build.make capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/build
-.PHONY : roslint_capra_landolt_detection/fast
+sensor_msgs_generate_messages_cpp/fast:
+	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+capra_landolt_detection/CMakeFiles/roslint.dir/rule:
+	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/roslint.dir/rule
+.PHONY : capra_landolt_detection/CMakeFiles/roslint.dir/rule
+
+# Convenience name for target.
+roslint: capra_landolt_detection/CMakeFiles/roslint.dir/rule
+
+.PHONY : roslint
+
+# fast build rule for target.
+roslint/fast:
+	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/roslint.dir/build.make capra_landolt_detection/CMakeFiles/roslint.dir/build
+.PHONY : roslint/fast
 
 # Convenience name for target.
 capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
@@ -241,64 +241,19 @@ sensor_msgs_generate_messages_py/fast:
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/rule:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/rule
-.PHONY : capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/rule
+capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/rule:
+	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/rule
+.PHONY : capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/rule
 
 # Convenience name for target.
-capra_nodelet_landolt: capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/rule
+roslint_capra_landolt_detection: capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/rule
 
-.PHONY : capra_nodelet_landolt
+.PHONY : roslint_capra_landolt_detection
 
 # fast build rule for target.
-capra_nodelet_landolt/fast:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/build.make capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/build
-.PHONY : capra_nodelet_landolt/fast
-
-# Convenience name for target.
-capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
+roslint_capra_landolt_detection/fast:
+	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/build.make capra_landolt_detection/CMakeFiles/roslint_capra_landolt_detection.dir/build
+.PHONY : roslint_capra_landolt_detection/fast
 
 # Convenience name for target.
 capra_landolt_detection/CMakeFiles/image_publisher_gencfg.dir/rule:
@@ -316,64 +271,34 @@ image_publisher_gencfg/fast:
 .PHONY : image_publisher_gencfg/fast
 
 # Convenience name for target.
-capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
+	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+.PHONY : capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_cpp: capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+sensor_msgs_generate_messages_lisp: capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
+sensor_msgs_generate_messages_lisp/fast:
+	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make capra_landolt_detection/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-.PHONY : capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/rule:
+	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/rule
+.PHONY : capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/rule
 
 # Convenience name for target.
-geometry_msgs_generate_messages_eus: capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
+capra_nodelet_landolt: capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/rule
 
-.PHONY : geometry_msgs_generate_messages_eus
+.PHONY : capra_nodelet_landolt
 
 # fast build rule for target.
-geometry_msgs_generate_messages_eus/fast:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-.PHONY : geometry_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f CMakeFiles/Makefile2 capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-.PHONY : capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geometry_msgs_generate_messages_nodejs/fast:
-	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make capra_landolt_detection/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-.PHONY : geometry_msgs_generate_messages_nodejs/fast
+capra_nodelet_landolt/fast:
+	cd /home/samuel/Documents/projetInt/build && $(MAKE) -f capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/build.make capra_landolt_detection/CMakeFiles/capra_nodelet_landolt.dir/build
+.PHONY : capra_nodelet_landolt/fast
 
 src/LandoltNodelet.o: src/LandoltNodelet.cpp.o
 
@@ -409,26 +334,21 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install"
+	@echo "... rebuild_cache"
 	@echo "... install/local"
-	@echo "... list_install_components"
-	@echo "... install/strip"
-	@echo "... test"
-	@echo "... roslint"
 	@echo "... edit_cache"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... roslint_capra_landolt_detection"
-	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... capra_nodelet_landolt"
-	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_py"
+	@echo "... test"
+	@echo "... roslint"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... roslint_capra_landolt_detection"
 	@echo "... image_publisher_gencfg"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... rebuild_cache"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... capra_nodelet_landolt"
+	@echo "... list_install_components"
+	@echo "... install/strip"
 	@echo "... src/LandoltNodelet.o"
 	@echo "... src/LandoltNodelet.i"
 	@echo "... src/LandoltNodelet.s"

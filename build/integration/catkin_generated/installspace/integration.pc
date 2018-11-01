@@ -1,0 +1,8 @@
+prefix=/home/samuel/Documents/projetInt/install
+
+Name: integration
+Description: Description of integration
+Version: 0.0.0
+Cflags: -I/home/samuel/Documents/projetInt/install/include
+Libs: -L/home/samuel/Documents/projetInt/install/lib -lintegration
+Requires: geometry_msgs roscpp std_msgs message_runtime
